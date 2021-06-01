@@ -24,7 +24,7 @@ class CreatePayrollTable extends Migration
                 ->on('users')
                 ->onDelete('cascade');
 
-            $table->decimal('salary',11);
+            $table->string('salary',20);
         });
     }
 

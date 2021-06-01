@@ -17,7 +17,7 @@ class CreateConceptsTable extends Migration
             $table->id();
             $table->string('description');
             $table->tinyInteger('status');
-            $table->decimal('value',20);
+            $table->string('value',20);
             
             // Fk_types_concepts
             $table->unsignedBigInteger('concepts_id');
