@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('salary',20);
             $table->text('password',25);
             $table->string('image',250);
-            $table->string('document_number');
+            $table->string('document_number',20);
             // Fk_rol
             $table->unsignedBigInteger('role_id');
             $table->foreign('role_id')
@@ -38,14 +38,14 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('document_type_id');
             $table->foreign('document_type_id')
                 ->references('id')
-                ->on('document_type')
+                ->on('document_types')
                 ->onDelete('cascade');
 
             // Fk_contract_type 
             $table->unsignedBigInteger('contract_type_id');
             $table->foreign('contract_type_id')
                 ->references('id')
-                ->on('contract_type')
+                ->on('contract_types')
                 ->onDelete('cascade');
             
             $table->text('token');

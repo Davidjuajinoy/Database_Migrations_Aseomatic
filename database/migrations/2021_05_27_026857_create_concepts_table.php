@@ -30,14 +30,14 @@ class CreateConceptsTable extends Migration
             $table->unsignedBigInteger('payroll_id');
             $table->foreign('payroll_id')
                 ->references('id')
-                ->on('payroll')
+                ->on('payrolls')
                 ->onDelete('cascade');
                 
             // Fk_types_concepts
-            $table->unsignedBigInteger('accounting_seat_id');
-            $table->foreign('accounting_seat_id')
+            $table->unsignedBigInteger('accounting_entry_id');
+            $table->foreign('accounting_entry_id')
                 ->references('id')
-                ->on('accounting_seat')
+                ->on('accounting_entry')
                 ->onDelete('cascade');
 
         });

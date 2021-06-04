@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAccountingSeatTable extends Migration
+class CreateContractTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateAccountingSeatTable extends Migration
      */
     public function up()
     {
-        Schema::create('accounting_seat', function (Blueprint $table) {
+        Schema::create('contract_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name',30);
+            $table->string('name',60);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateAccountingSeatTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accounting_seat');
+        Schema::dropIfExists('contract_type');
     }
 }

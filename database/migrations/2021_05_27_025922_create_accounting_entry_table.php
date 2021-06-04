@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDocumentTypeTable extends Migration
+class CreateAccountingEntryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateDocumentTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('document_type', function (Blueprint $table) {
+        Schema::create('accounting_entry', function (Blueprint $table) {
             $table->id();
-            $table->string('name',25);
+            $table->string('name',30);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateDocumentTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('document_type');
+        Schema::dropIfExists('accounting_seat');
     }
 }
