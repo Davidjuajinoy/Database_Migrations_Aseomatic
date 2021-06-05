@@ -15,7 +15,7 @@ class CreateTypesConceptsTable extends Migration
     {
         Schema::create('types_concepts', function (Blueprint $table) {
             $table->id();
-            $table->string('name',20);
+            $table->string('name',40);
         });
     }
 

@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AccountingEntrySeeder::class);
         $this->call(ContractTypeSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(TypeConceptSeeder::class);
     }
 }

@@ -16,7 +16,7 @@ class CreateConceptsTable extends Migration
         Schema::create('concepts', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->tinyInteger('status');
+            $table->tinyInteger('status')->default(1);
             $table->string('value',20);
             
             // Fk_types_concepts

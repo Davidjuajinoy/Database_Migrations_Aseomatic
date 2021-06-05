@@ -24,7 +24,7 @@ class CreatePayrollsTable extends Migration
                 ->on('users')
                 ->onDelete('cascade');
 
-            $table->string('salary',20);
+            $table->string('salary',20)->nullable();
         });
     }
 
