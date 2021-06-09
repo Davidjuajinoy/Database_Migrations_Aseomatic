@@ -23,5 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ContractTypeSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(TypeConceptSeeder::class);
+        $this->call(EventSeeder::class);
+        $this->call(NewsSeeder::class);
     }
 }
