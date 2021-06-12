@@ -25,6 +25,7 @@ class CreatePayrollsTable extends Migration
                 ->onDelete('cascade');
 
             $table->string('salary',20)->nullable();
+            $table->boolean('status')->default(1);
         });
     }
 

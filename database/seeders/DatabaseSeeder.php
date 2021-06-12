@@ -25,5 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TypeConceptSeeder::class);
         $this->call(EventSeeder::class);
         $this->call(NewsSeeder::class);
+        $this->call(PayrollSeeder::class);
+        $this->call(ConceptsSeeder::class);
     }
 }

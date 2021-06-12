@@ -18,10 +18,12 @@ class CreateUsersTable extends Migration
             $table->string('name',25);
             $table->string('lastname',25);
             $table->string('email',25);
+            $table->unique('email');
             $table->string('salary',20);
             $table->text('password',25);
             $table->string('image',250);
             $table->string('document_number',20);
+            $table->boolean('status')->default(1);
             // Fk_rol
             $table->unsignedBigInteger('role_id');
             $table->foreign('role_id')
